@@ -1,43 +1,36 @@
-const App = () => {
-    const imgAdresse = "https://st1.myideasoft.com/shop/zr/76/myassets/products/942/1115261-3802.png?revision=1666435310";
+import Directory from "./components/directory/directory.component";
 
+const App = () => {
     const categories = [
         {
             id: 1,
-            title: 'Ceket'
+            title: 'Ceket',
+            imageUrl: 'https://cms.brnstc.de/product_images/1122x1536_retina/cpro/media/images/product/22/11/100137485917000_0_1669820647831.jpg'
         },
         {
             id: 2,
-            title: 'Gömlek'
+            title: 'Gömlek',
+            imageUrl: 'https://image-resizing.booztcdn.com/tommy-jeans/tjsdm0dm15129_ctwilightnavy_vc87.webp?has_grey=1&has_webp=1&size=source'
         },
         {
             id: 3,
-            title: 'Ayakkabi'
+            title: 'Ayakkabi',
+            imageUrl: 'https://ayb.akinoncdn.com/products/2022/06/10/148076/ad40bc33-298f-4dbd-b85f-c06b5afa983a_size780x780_quality60_cropCenter.jpg'
         },
         {
             id: 4,
-            title: 'Pantolon'
+            title: 'Pantolon',
+            imageUrl: 'https://productimages.hepsiburada.net/s/300/600-800/110000291428998.jpg'
         },
         {
             id: 5,
-            title: 'Kazak'
+            title: 'Kazak',
+            imageUrl: 'https://s3.gsxtr.com/i/p/tommy-hilfiger-tommy-logo-crew-neck-sweater-desert-sky-373334-2500-1.jpg'
         }
-
     ]
 
     return (
-        <div className='categories-container'>
-            { categories.map((category) => (
-                <div className='category-container' id={`category_${category.id}`}>
-                    <div className='background-image' />
-                    <img src={ imgAdresse } height='300px' />
-                    <div className='category-body-container'>
-                        <h2>{ category.title }</h2>
-                        <p>Di haydi</p>
-                    </div>
-                </div>
-            )) }
-        </div>
+        <Directory categories={ categories } />
     );
 }
 
